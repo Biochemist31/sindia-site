@@ -4,15 +4,18 @@
    Toutes les couleurs sont centralisées ici (tokens). */
 
 :root {
-  --green: #2F7D4E;        /* vert principal : boutons, titres, liens */
-  --green-hover: #276A42;
-  --green-soft: #DCEFE2;   /* bordures, séparateurs */
-  --green-tint: #F1F8F3;   /* fonds de cartes / sections */
+  /* Charte SinDia — aucune couleur foncée (hors texte de lecture) */
+  --blue: #0067FF;         /* bleu SinDia : titres, boutons, liens (blanc/bleu = 4,79:1) */
+  --yellow: #FFCC00;       /* jaune SinDia : badges, bandes décoratives (jamais texte sur blanc) */
+  --blue-soft: #D6E4FB;    /* bordures, séparateurs */
+  --blue-tint: #F3F6FB;    /* fonds de sections / encadrés (bleu dessus = 4,42:1 : pas de lien bleu) */
+  --yellow-tint: #FFF8D6;
   --white: #FFFFFF;
   --text: #1F2937;
   --text-muted: #4B5563;
-  --todo-bg: #FFF8D6;      /* encadrés [À COMPLÉTER] */
-  --todo-border: #E0B400;
+  /* Marqueur temporaire [À COMPLÉTER], volontairement hors charte pour être repéré */
+  --todo-bg: #FFF1F2;
+  --todo-border: #E11D48;
   --radius: 12px;
   --max: 1080px;
   --font: 'Poppins', Arial, Helvetica, sans-serif;
@@ -35,16 +38,20 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: var(--green); }
-a:hover { color: var(--green-hover); }
+a { color: var(--blue); }
+a:hover { text-decoration-thickness: 2px; }
+/* Sur fond teinté, bleu = 4,42:1 (< 4,5) : liens en texte foncé soulignés de bleu */
+.section-tint a:not(.btn), .hero a:not(.btn), .notice a:not(.btn) {
+  color: var(--text); text-decoration-color: var(--blue); text-underline-offset: 3px;
+}
 
-:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
 
 .container { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
 
 .skip-link {
   position: absolute; left: -9999px; top: 0;
-  background: var(--green); color: var(--white); padding: 8px 12px; z-index: 100;
+  background: var(--blue); color: var(--white); padding: 8px 12px; z-index: 100;
 }
 .skip-link:focus { left: 8px; top: 8px; }
 
@@ -52,7 +59,7 @@ a:hover { color: var(--green-hover); }
 .site-header {
   position: sticky; top: 0; z-index: 50;
   background: var(--white);
-  border-bottom: 1px solid var(--green-soft);
+  border-bottom: 1px solid var(--blue-soft);
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -72,8 +79,8 @@ a:hover { color: var(--green-hover); }
   text-decoration: none; font-weight: 500; font-size: .88rem;
   color: var(--text);
 }
-.main-nav a:hover { background: var(--green-tint); color: var(--green); }
-.main-nav a[aria-current="page"] { background: var(--green); color: var(--white); }
+.main-nav a:hover { background: var(--blue-tint); color: var(--text); }
+.main-nav a[aria-current="page"] { background: var(--blue); color: var(--white); }
 
 .nav-short { display: none; }
 @media (max-width: 419px) { .nav-long { display: none; } .nav-short { display: inline; } }
@@ -82,13 +89,13 @@ a:hover { color: var(--green-hover); }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 48px; padding: 12px 20px;
-  border-radius: 999px; border: 2px solid var(--green);
+  border-radius: 999px; border: 2px solid var(--blue);
   font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
 }
-.btn-primary { background: var(--green); color: var(--white); }
-.btn-primary:hover { background: var(--green-hover); border-color: var(--green-hover); color: var(--white); }
-.btn-outline { background: var(--white); color: var(--green); }
-.btn-outline:hover { background: var(--green-tint); }
+.btn-primary { background: var(--blue); color: var(--white); }
+.btn-primary:hover { color: var(--white); box-shadow: 0 0 0 3px var(--yellow); }
+.btn-outline { background: var(--white); color: var(--blue); }
+.btn-outline:hover { color: var(--blue); box-shadow: 0 0 0 3px var(--yellow); }
 .btn svg { width: 20px; height: 20px; flex: none; }
 .btn.header-call { display: none; } /* remplacé par la barre d'appel en bas sur mobile */
 
@@ -97,7 +104,7 @@ a:hover { color: var(--green-hover); }
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
   background: var(--white);
-  border-top: 1px solid var(--green-soft);
+  border-top: 1px solid var(--blue-soft);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, .06);
 }
 .call-bar .btn { width: 100%; font-size: 1.05rem; }
@@ -105,33 +112,37 @@ a:hover { color: var(--green-hover); }
 /* ---------- Sections ---------- */
 main { display: block; }
 section { padding: 32px 0; }
-.section-tint { background: var(--green-tint); }
+.section-tint { background: var(--blue-tint); }
 
 h1, h2, h3 { line-height: 1.25; margin: 0 0 12px; }
-h1 { font-size: 1.75rem; font-weight: 700; color: var(--green); }
-h2 { font-size: 1.35rem; font-weight: 600; color: var(--green); }
+h1 { font-size: 1.75rem; font-weight: 700; color: var(--blue); }
+h2 { font-size: 1.35rem; font-weight: 700; color: var(--blue); }
 h3 { font-size: 1.1rem; font-weight: 600; }
 p { margin: 0 0 12px; }
 
 .page-title { padding: 28px 0 8px; }
 .page-title p { color: var(--text-muted); }
 
-.hero { padding: 32px 0; background: var(--green-tint); }
+.hero { padding: 32px 0; background: var(--blue-tint); }
+.hero h1::after {
+  content: ""; display: block; width: 64px; height: 6px; margin-top: 12px;
+  border-radius: 3px; background: var(--yellow); /* bande décorative */
+}
 .hero .tagline { font-size: 1.1rem; color: var(--text-muted); }
 .hero-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
 
 .badge {
   display: inline-block; margin-bottom: 12px;
   padding: 4px 12px; border-radius: 999px;
-  background: var(--white); border: 1px solid var(--green-soft);
-  color: var(--green); font-weight: 600; font-size: .9rem;
+  background: var(--yellow); color: var(--blue);
+  font-weight: 700; font-size: 1.2rem; /* bleu/jaune = 3,17:1 : réservé au gros texte gras */
 }
 
 .grid { display: grid; gap: 16px; }
 
 .card {
   background: var(--white);
-  border: 1px solid var(--green-soft);
+  border: 1px solid var(--blue-soft);
   border-radius: var(--radius);
   padding: 20px;
 }
@@ -139,17 +150,17 @@ p { margin: 0 0 12px; }
 .card .icon {
   width: 44px; height: 44px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background: var(--green-tint); color: var(--green); margin-bottom: 12px;
+  background: var(--blue-tint); color: var(--blue); margin-bottom: 12px;
 }
 .card .icon svg { width: 24px; height: 24px; }
 
 .info-list { list-style: none; margin: 0; padding: 0; }
 .info-list li {
   display: flex; gap: 12px; align-items: flex-start;
-  padding: 12px 0; border-bottom: 1px solid var(--green-soft);
+  padding: 12px 0; border-bottom: 1px solid var(--blue-soft);
 }
 .info-list li:last-child { border-bottom: 0; }
-.info-list svg { width: 22px; height: 22px; flex: none; color: var(--green); margin-top: 2px; }
+.info-list svg { width: 22px; height: 22px; flex: none; color: var(--blue); margin-top: 2px; }
 .info-list strong { display: block; }
 
 .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
@@ -161,7 +172,7 @@ p { margin: 0 0 12px; }
   content: counter(step);
   position: absolute; left: 0; top: 0;
   width: 32px; height: 32px; border-radius: 50%;
-  background: var(--green); color: var(--white);
+  background: var(--blue); color: var(--white);
   display: flex; align-items: center; justify-content: center; font-weight: 600;
 }
 
@@ -175,14 +186,14 @@ p { margin: 0 0 12px; }
 div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
 
 .notice {
-  background: var(--green-tint); border-left: 4px solid var(--green);
+  background: var(--blue-tint); border-left: 4px solid var(--blue);
   padding: 14px 16px; border-radius: 8px; margin: 16px 0;
 }
 
 /* ---------- Pied de page ---------- */
 .site-footer {
   margin-top: 16px; padding: 28px 0;
-  background: var(--green-tint); border-top: 1px solid var(--green-soft);
+  background: var(--white); border-top: 4px solid var(--yellow); /* blanc : titres bleus à 4,79:1 */
   font-size: .95rem;
 }
 .site-footer h2 { font-size: 1.05rem; }
@@ -193,7 +204,7 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
 
 .map-frame {
   width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--radius);
-  background: var(--green-tint);
+  background: var(--blue-tint);
 }
 
 /* ---------- Tablette et plus ---------- */
