@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.className = 'js';</script>
 </head>
-<body class="page-portail">
+<body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <header class="site-header">
@@ -47,12 +47,25 @@
       <div class="container">
         <h1>Mes résultats</h1>
         <p>Connectez-vous avec le nom d'utilisateur et le mot de passe remis par le laboratoire.</p>
-        <p class="small-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Portail sécurisé du laboratoire (sindia.bmvie.net). Le formulaire ne s'affiche pas ou la connexion échoue ? <a href="https://sindia.bmvie.net/" target="_blank" rel="noopener">Ouvrir le portail dans une nouvelle fenêtre <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a> · Aide : <a href="tel:+213770280820">0770 280 820</a></p>
       </div>
     </section>
+    <section>
+      <div class="container">
+        <div class="card portal-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h2>Espace résultats sécurisé</h2>
+          <p>Votre espace résultats est hébergé sur le portail sécurisé du laboratoire (sindia.bmvie.net).</p>
+          <a class="btn btn-primary" href="https://sindia.bmvie.net/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Se connecter à mon espace</a>
+          <p class="small-note">Un problème de connexion ? Appelez le laboratoire au <a href="tel:+213770280820">0770 280 820</a>. Ne communiquez jamais vos identifiants par téléphone ou par message.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Portail intégré : à réactiver quand BMVie autorise l'affichage dans ce site
+         (en-tête Content-Security-Policy frame-ancestors incluant le domaine du site) :
     <div class="portal-wrap">
-      <iframe class="portal-frame" src="https://sindia.bmvie.net/" title="Portail résultats SinDia (BMVie)" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <iframe class="portal-frame" src="https://sindia.bmvie.net/" title="Portail résultats SinDia (BMVie)"></iframe>
     </div>
+    -->
   </main>
 
   <footer class="site-footer">

@@ -273,6 +273,7 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
   height: calc(100vh - 150px); min-height: 560px;
   border: 1px solid var(--blue-soft); border-radius: var(--radius); background: var(--white);
 }
+.portal-card { max-width: 600px; }
 .page-portail { padding-bottom: 0; }
 .page-portail .call-bar { display: none; } /* libère l'écran pour le portail sur mobile */
 .page-portail .site-footer { margin-top: 0; }
