@@ -44,10 +44,13 @@ Sources (consultées le 3/11/2026) : [biogene-diagnostic.com](https://biogene-di
 - Référencement : **données structurées schema.org `DiagnosticLab`** (nom, adresse, téléphone, ouverture 24h/24 et 7j/7), balises Open Graph, `robots.txt`.
 - Confidentialité : **police Poppins hébergée sur le site** (plus aucune requête vers Google), mention de la loi n° 18-07 modifiée par la loi n° 25-11 du 24 juillet 2025.
 
-## 5. À décider par le laboratoire (hors de portée d'un site statique)
+## 5. Atout SinDia confirmé : la fiche Google
 
-- Portail de résultats en ligne : quel outil ? Votre système informatique de laboratoire en propose-t-il un ?
+Le 3 novembre 2026, la fiche Google de SinDia affichait **4,7/5 sur 844 avis** (lecture directe de la fiche). Le site la met désormais en avant : note dans le bandeau d'accueil, bloc « Nos patients en parlent », liens « Lire les avis » et « Donner mon avis ». Les notes Google des concurrents n'ont pas été relevées.
+
+## 6. À décider par le laboratoire (hors de portée d'un site statique)
+
+- Portail de résultats (BMVie, sindia.bmvie.net) : la connexion se fait par une API qui enregistre le jeton dans le navigateur, sur le domaine du portail. Des champs intégrés au site vitrine ne peuvent donc pas ouvrir la session. Il faut que l'éditeur fournisse un point d'entrée prévu pour ça (SSO). En attendant, le site renvoie vers le portail par un lien.
 - Rendez-vous ou demande de prélèvement à domicile en ligne : par lien WhatsApp (simple) ou par module dédié ?
-- Fiche Google Business Profile : à créer ou à revendiquer. C'est le premier point de contact local, et la source des avis.
 - Version arabe du site.
 - Nom de domaine et hébergement : ils sont nécessaires pour le `sitemap.xml`, l'image de partage Open Graph et la mise en ligne.

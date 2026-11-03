@@ -132,7 +132,8 @@ a:hover { text-decoration-thickness: 2px; }
   border-top: 1px solid var(--blue-soft);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, .06);
 }
-.call-bar .btn { width: 100%; font-size: 1.05rem; }
+.call-bar { display: flex; gap: 8px; }
+.call-bar .btn { flex: 1; font-size: 1.05rem; padding-left: 12px; padding-right: 12px; }
 
 /* ---------- Sections ---------- */
 main { display: block; }
@@ -237,6 +238,29 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
 .daynight .accroche { font-size: 1.35rem; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
 
 .quote { font-size: 1.15rem; font-weight: 600; color: var(--blue); margin: 0 0 4px; }
+
+/* ---------- Avis Google ---------- */
+.stars { display: inline-flex; gap: 1px; color: #F5A400; vertical-align: -3px; } /* étoiles : graphisme, pas du texte */
+.stars svg { width: 18px; height: 18px; }
+.stars-lg svg { width: 26px; height: 26px; }
+.rating-line {
+  display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  margin-top: 4px; color: var(--text); text-decoration: none;
+}
+.hero a.rating-line { text-decoration: none; }
+.rating-line:hover strong { text-decoration: underline; }
+.google-card {
+  display: grid; gap: 20px; align-items: center;
+  background: var(--white); border: 1px solid var(--blue-soft); border-radius: var(--radius);
+  padding: 24px 20px;
+}
+.google-score { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.google-score .score { font-size: 3.2rem; font-weight: 700; line-height: 1; color: var(--blue); }
+.google-score .score small { font-size: 1.2rem; color: var(--text-muted); font-weight: 600; }
+.small-note { font-size: .85rem; color: var(--text-muted); margin-top: 10px; }
+.card .btn + .small-note { margin-top: 12px; }
+.card .btn { margin: 4px 0 8px; }
+@media (min-width: 640px) { .google-card { grid-template-columns: 220px 1fr; padding: 28px; } }
 
 /* ---------- FAQ ---------- */
 .faq details {

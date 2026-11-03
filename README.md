@@ -19,6 +19,13 @@ Police : Poppins hébergée dans `assets/fonts/` (licence OFL, `assets/fonts/OFL
 
 Benchmark des sites concurrents : `docs/benchmark-sites-laboratoires.md`.
 
+## Liens externes (à tenir à jour)
+Définis en tête du générateur et répétés dans les pages :
+- Portail résultats : https://sindia.bmvie.net/ (simple lien : les identifiants ne sont jamais saisis sur ce site)
+- Fiche Google : https://maps.app.goo.gl/Yw23LJdihmPYYyqD7
+- WhatsApp : https://wa.me/213770280820 · Facebook : https://www.facebook.com/SinDia.Algeria/
+- **Note Google affichée (4,7/5, 844 avis, relevé du 3 novembre 2026) : valeur figée, à mettre à jour à la main** dans `index.html` et `contact.html`.
+
 ## Contenu provisoire
 Tous les passages à compléter sont marqués `[À COMPLÉTER : …]` (encadrés roses).
 Pour les lister : `grep -o "À COMPLÉTER : [^]]*" *.html`
