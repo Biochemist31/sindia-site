@@ -3,6 +3,17 @@
    les media queries (min-width) enrichissent pour les écrans larges.
    Toutes les couleurs sont centralisées ici (tokens). */
 
+/* Poppins auto-hébergée (SIL Open Font License, voir assets/fonts/OFL.txt) :
+   aucune requête vers Google à l'ouverture du site. */
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../assets/fonts/poppins-latin-400.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('../assets/fonts/poppins-latin-500.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('../assets/fonts/poppins-latin-600.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('../assets/fonts/poppins-latin-700.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 :root {
   /* Charte SinDia — aucune couleur foncée (hors texte de lecture) */
   --blue: #0067FF;         /* bleu SinDia : titres, boutons, liens (blanc/bleu = 4,79:1) */
@@ -69,21 +80,35 @@ a:hover { text-decoration-thickness: 2px; }
 .brand img { width: 140px; }
 
 
+.nav-toggle {
+  display: none; /* affiché seulement si JavaScript est actif (classe .js) */
+  align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px;
+  border: 2px solid var(--blue); border-radius: 999px; background: var(--white);
+  color: var(--blue); font: inherit; font-weight: 600; cursor: pointer;
+}
+.nav-toggle svg { width: 20px; height: 20px; }
+.js .nav-toggle { display: inline-flex; }
+
 .main-nav ul {
-  list-style: none; margin: 0; padding: 0 0 8px;
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px;
+  list-style: none; margin: 0; padding: 0 0 10px;
+  display: flex; flex-wrap: wrap; gap: 4px;
 }
 .main-nav a {
   display: block; white-space: nowrap;
-  padding: 7px 8px; border-radius: 999px;
-  text-decoration: none; font-weight: 500; font-size: .88rem;
+  padding: 7px 10px; border-radius: 999px;
+  text-decoration: none; font-weight: 500; font-size: .9rem;
   color: var(--text);
 }
 .main-nav a:hover { background: var(--blue-tint); color: var(--text); }
 .main-nav a[aria-current="page"] { background: var(--blue); color: var(--white); }
 
-.nav-short { display: none; }
-@media (max-width: 419px) { .nav-long { display: none; } .nav-short { display: inline; } }
+/* Avec JavaScript, sur mobile : menu replié derrière le bouton « Menu » */
+@media (max-width: 1023px) {
+  .js .main-nav { display: none; }
+  .js .main-nav.open { display: block; }
+  .js .main-nav ul { flex-direction: column; gap: 2px; padding-bottom: 12px; }
+  .js .main-nav a { border-radius: 8px; padding: 12px 14px; font-size: 1rem; }
+}
 
 /* ---------- Boutons ---------- */
 .btn {
@@ -190,6 +215,49 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
   padding: 14px 16px; border-radius: 8px; margin: 16px 0;
 }
 
+/* ---------- Accès rapides (accueil) ---------- */
+.tiles { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+.tile {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 16px; border-radius: var(--radius);
+  background: var(--white); border: 1px solid var(--blue-soft);
+  text-decoration: none; color: var(--text); font-weight: 600; line-height: 1.3;
+}
+.tile svg { width: 28px; height: 28px; color: var(--blue); }
+.tile small { font-weight: 400; color: var(--text-muted); }
+.tile:hover { box-shadow: 0 0 0 3px var(--yellow); color: var(--text); }
+
+/* ---------- Bloc « entre le jour et la nuit » ---------- */
+.daynight {
+  align-self: start; /* ne pas s'étirer à la hauteur de la colonne voisine */
+  border-radius: var(--radius); padding: 24px 20px;
+  background: linear-gradient(90deg, var(--yellow-tint) 0%, var(--white) 50%, var(--blue-tint) 100%);
+  border: 1px solid var(--blue-soft);
+}
+.daynight .accroche { font-size: 1.35rem; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+
+.quote { font-size: 1.15rem; font-weight: 600; color: var(--blue); margin: 0 0 4px; }
+
+/* ---------- FAQ ---------- */
+.faq details {
+  border: 1px solid var(--blue-soft); border-radius: var(--radius);
+  background: var(--white); margin-bottom: 10px;
+}
+.faq summary {
+  cursor: pointer; list-style: none; padding: 14px 44px 14px 16px; position: relative;
+  font-weight: 600; min-height: 48px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  font-size: 1.4rem; font-weight: 600; color: var(--blue);
+}
+.faq details[open] summary::after { content: "–"; }
+.faq .answer { padding: 0 16px 14px; }
+.faq h2 { margin-top: 24px; }
+
+.legal h2 { margin-top: 28px; }
+
 /* ---------- Pied de page ---------- */
 .site-footer {
   margin-top: 16px; padding: 28px 0;
@@ -211,28 +279,32 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
 @media (min-width: 640px) {
   .hero-actions { flex-direction: row; flex-wrap: wrap; }
   .grid-2 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   h1 { font-size: 2.1rem; }
 }
 
 /* ---------- Ordinateur ---------- */
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   body { padding-bottom: 0; }
   .call-bar { display: none; }
 
   .header-inner { padding-top: 12px; padding-bottom: 12px; }
   .site-header .container.header-wrap {
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
   }
   .header-inner { flex: none; }
+  .js .nav-toggle { display: none; }
   .main-nav { flex: 1; }
-  .main-nav ul { padding: 0; justify-content: flex-end; flex-wrap: nowrap; gap: 4px; }
-  .main-nav a { padding: 8px 12px; font-size: .95rem; }
+  .main-nav ul { padding: 0; justify-content: flex-end; flex-wrap: nowrap; gap: 2px; }
+  .main-nav a { padding: 8px 11px; font-size: .92rem; }
   .btn.header-call { display: inline-flex; }
+}
 
+@media (min-width: 900px) {
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
   section { padding: 48px 0; }
   .hero { padding: 56px 0; }
   h1 { font-size: 2.4rem; }

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nos analyses – Laboratoire SinDia, Oran</title>
   <meta name="description" content="Analyses de biologie médicale réalisées par le Laboratoire SinDia à Oran.">
   <meta name="theme-color" content="#0067FF">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_DZ">
+  <meta property="og:site_name" content="Laboratoire SinDia">
+  <meta property="og:title" content="Nos analyses – Laboratoire SinDia, Oran">
+  <meta property="og:description" content="Analyses de biologie médicale réalisées par le Laboratoire SinDia à Oran.">
   <link rel="icon" type="image/png" href="assets/img/logo-sindia.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -21,12 +25,16 @@
         <a class="brand" href="index.html" aria-label="Laboratoire SinDia – Accueil">
           <img src="assets/img/logo-sindia.png" alt="SinDia – Biologie médicale" width="512" height="212">
         </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg> Menu</button>
       </div>
-      <nav class="main-nav" aria-label="Menu principal">
+      <nav class="main-nav" id="menu" aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="analyses.html" aria-current="page"><span class="nav-long">Nos analyses</span><span class="nav-short">Analyses</span></a></li>
+          <li><a href="laboratoire.html">Le laboratoire</a></li>
+          <li><a href="analyses.html" aria-current="page">Nos analyses</a></li>
           <li><a href="preparation.html">Préparation</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -69,8 +77,10 @@
       <div class="container">
         <h2>Délais de rendu des résultats</h2>
         <p class="todo">[À COMPLÉTER : délais par type d'analyse, à fournir par le laboratoire. Aucun délai n'est indiqué ici volontairement.]</p>
-        <h2>Analyses spécialisées</h2>
-        <p class="todo">[À COMPLÉTER : préciser si certaines analyses sont transmises à un laboratoire partenaire et comment le patient en est informé]</p>
+        <h2>Analyses transmises à un laboratoire partenaire</h2>
+        <p class="todo">[À COMPLÉTER : liste ou principe, et information du patient]</p>
+        <h2>Bilans sans ordonnance</h2>
+        <p class="todo">[À COMPLÉTER : le laboratoire réalise-t-il des analyses sans ordonnance ? Si oui, lesquelles et dans quelles conditions]</p>
         <h2>Tarifs</h2>
         <p class="todo">[À COMPLÉTER : politique d'information sur les tarifs (affichage, devis par téléphone, conventions). Aucun prix n'est indiqué ici volontairement.]</p>
       </div>
@@ -92,6 +102,7 @@
         <div>
           <h2>Laboratoire d'Analyses de Biologie Médicale SinDia</h2>
           <p>La fiabilité avant tout, un service de proximité humaine.</p>
+          <p><strong>Ouvert 24h/24 · 7j/7</strong></p>
         </div>
         <div>
           <h2>Contact</h2>
@@ -102,11 +113,23 @@
           </ul>
         </div>
         <div>
-          <h2>Horaires</h2>
-          <p><strong>Ouvert 24h/24, 7j/7</strong></p>
+          <h2>Patients</h2>
+          <ul>
+            <li><a href="preparation.html">Préparer son prélèvement</a></li>
+            <li><a href="services.html#resultats">Résultats</a></li>
+            <li><a href="faq.html">Questions fréquentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Informations</h2>
+          <ul>
+            <li><a href="laboratoire.html">Le laboratoire</a></li>
+            <li><a href="services.html#professionnels">Professionnels de santé</a></li>
+            <li><a href="mentions-legales.html">Mentions légales et confidentialité</a></li>
+          </ul>
         </div>
       </div>
-      <p class="footer-bottom">© <span id="annee">2026</span> Laboratoire SinDia – Oran. <span class="todo">[À COMPLÉTER : mentions légales (agrément, n° d'autorisation, biologiste responsable)]</span></p>
+      <p class="footer-bottom">© <span id="annee">2026</span> Laboratoire SinDia – Oran.</p>
     </div>
   </footer>
 
@@ -114,6 +137,6 @@
     <a class="btn btn-primary" href="tel:+213770280820"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Appeler le laboratoire</a>
   </div>
 
-  <script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
+  <script src="js/site.js"></script>
 </body>
 </html>
