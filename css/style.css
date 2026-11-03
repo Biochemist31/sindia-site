@@ -262,6 +262,21 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
 .card .btn { margin: 4px 0 8px; }
 @media (min-width: 640px) { .google-card { grid-template-columns: 220px 1fr; padding: 28px; } }
 
+/* ---------- Page « Mes résultats » : portail BMVie intégré ---------- */
+.portal-head { padding: 20px 0 12px; }
+.portal-head h1 { margin-bottom: 6px; }
+.portal-head p { margin-bottom: 6px; }
+.portal-head .small-note svg { width: 14px; height: 14px; vertical-align: -2px; }
+.portal-wrap { padding: 0 8px 8px; }
+.portal-frame {
+  display: block; width: 100%; max-width: 1280px; margin: 0 auto;
+  height: calc(100vh - 150px); min-height: 560px;
+  border: 1px solid var(--blue-soft); border-radius: var(--radius); background: var(--white);
+}
+.page-portail { padding-bottom: 0; }
+.page-portail .call-bar { display: none; } /* libère l'écran pour le portail sur mobile */
+.page-portail .site-footer { margin-top: 0; }
+
 /* ---------- FAQ ---------- */
 .faq details {
   border: 1px solid var(--blue-soft); border-radius: var(--radius);
