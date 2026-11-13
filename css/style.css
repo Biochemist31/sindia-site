@@ -450,3 +450,10 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
   .js .anim-in { opacity: 1 !important; transform: none !important; transition: none !important; }
   .exam, .chip, #catSearch, .btn, .tile, .card { transition: none !important; }
 }
+
+/* Marqueur « transmis à un partenaire » dans le catalogue */
+.exam-meta {
+  display: inline-block; margin-top: 4px; align-self: flex-start;
+  font-size: .72rem; font-weight: 600; color: var(--blue);
+  background: var(--blue-tint); border-radius: 999px; padding: 2px 9px;
+}

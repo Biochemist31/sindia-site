@@ -46,7 +46,7 @@
     <section class="page-title">
       <div class="container">
         <h1>Nos analyses</h1>
-        <p>Recherchez un examen par son nom ou son sigle, ou parcourez par domaine. 65 examens de référence.</p>
+        <p>Recherchez un examen par son nom ou son sigle, ou parcourez par domaine. 168 examens de référence.</p>
       </div>
     </section>
 
@@ -60,15 +60,25 @@
         </div>
         <div class="chips" id="catChips" role="group" aria-label="Filtrer par domaine">
           <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">Tous</button>
-          <button type="button" class="chip" data-filter="biochimie" aria-pressed="false">Biochimie</button>
+          <button type="button" class="chip" data-filter="biochimie" aria-pressed="false">Biochimie générale</button>
+          <button type="button" class="chip" data-filter="martial" aria-pressed="false">Bilan martial & anémie</button>
           <button type="button" class="chip" data-filter="hematologie" aria-pressed="false">Hématologie</button>
-          <button type="button" class="chip" data-filter="hemostase" aria-pressed="false">Hémostase</button>
-          <button type="button" class="chip" data-filter="hormonologie" aria-pressed="false">Hormonologie</button>
-          <button type="button" class="chip" data-filter="immuno-serologie" aria-pressed="false">Immunologie / Sérologie</button>
-          <button type="button" class="chip" data-filter="microbiologie" aria-pressed="false">Microbiologie</button>
+          <button type="button" class="chip" data-filter="immuno-hema" aria-pressed="false">Immuno-hématologie / Groupe</button>
+          <button type="button" class="chip" data-filter="hemostase" aria-pressed="false">Hémostase / Coagulation</button>
+          <button type="button" class="chip" data-filter="diabeto-cardio" aria-pressed="false">Marqueurs cardiaques</button>
+          <button type="button" class="chip" data-filter="thyroide" aria-pressed="false">Thyroïde</button>
+          <button type="button" class="chip" data-filter="hormono-repro" aria-pressed="false">Hormones de la reproduction</button>
+          <button type="button" class="chip" data-filter="endocrino" aria-pressed="false">Endocrinologie / Surrénale</button>
+          <button type="button" class="chip" data-filter="vitamines" aria-pressed="false">Vitamines & oligo-éléments</button>
+          <button type="button" class="chip" data-filter="proteines" aria-pressed="false">Protéines & électrophorèse</button>
+          <button type="button" class="chip" data-filter="immuno-auto" aria-pressed="false">Immunologie / Auto-immunité</button>
+          <button type="button" class="chip" data-filter="allergo" aria-pressed="false">Allergologie</button>
+          <button type="button" class="chip" data-filter="serologie" aria-pressed="false">Sérologies infectieuses</button>
+          <button type="button" class="chip" data-filter="microbiologie" aria-pressed="false">Microbiologie / Bactériologie</button>
           <button type="button" class="chip" data-filter="parasitologie" aria-pressed="false">Parasitologie / Mycologie</button>
           <button type="button" class="chip" data-filter="marqueurs" aria-pressed="false">Marqueurs tumoraux</button>
           <button type="button" class="chip" data-filter="spermiologie" aria-pressed="false">Spermiologie</button>
+          <button type="button" class="chip" data-filter="toxico" aria-pressed="false">Suivi thérapeutique & toxicologie</button>
         </div>
         <p class="cat-status" id="catStatus" aria-live="polite"></p>
       </div>
@@ -76,113 +86,266 @@
 
     <div class="container cat-results" id="catResults">
       <section class="cat-domain" data-domain="biochimie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2"/><path d="M7 15h10"/></svg></span>Biochimie <span class="cat-count">18</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2"/><path d="M7 15h10"/></svg></span>Biochimie générale <span class="cat-count">33</span></h2>
         <ul class="exam-list">
           <li class="exam" data-search="glycemie a jeun sucre glucose" data-domain="biochimie"><span class="exam-name">Glycémie à jeun</span><span class="exam-aka">sucre, glucose</span></li>
+          <li class="exam" data-search="glycemie post-prandiale " data-domain="biochimie"><span class="exam-name">Glycémie post-prandiale</span></li>
+          <li class="exam" data-search="hyperglycemie provoquee (hgpo) o'sullivan charge glucose" data-domain="biochimie"><span class="exam-name">Hyperglycémie provoquée (HGPO)</span><span class="exam-aka">o'sullivan, charge glucose</span></li>
           <li class="exam" data-search="hemoglobine glyquee (hba1c) hba1c diabete" data-domain="biochimie"><span class="exam-name">Hémoglobine glyquée (HbA1c)</span><span class="exam-aka">hba1c, diabète</span></li>
+          <li class="exam" data-search="fructosamine " data-domain="biochimie"><span class="exam-name">Fructosamine</span></li>
           <li class="exam" data-search="uree " data-domain="biochimie"><span class="exam-name">Urée</span></li>
-          <li class="exam" data-search="creatinine fonction renale dfg" data-domain="biochimie"><span class="exam-name">Créatinine</span><span class="exam-aka">fonction rénale, dfg</span></li>
+          <li class="exam" data-search="creatinine (+ dfg) fonction renale clairance dfg" data-domain="biochimie"><span class="exam-name">Créatinine (+ DFG)</span><span class="exam-aka">fonction rénale, clairance, dfg</span></li>
           <li class="exam" data-search="acide urique uricemie goutte" data-domain="biochimie"><span class="exam-name">Acide urique</span><span class="exam-aka">uricémie, goutte</span></li>
-          <li class="exam" data-search="bilan lipidique cholesterol triglycerides hdl ldl" data-domain="biochimie"><span class="exam-name">Bilan lipidique</span><span class="exam-aka">cholestérol, triglycérides, hdl, ldl</span></li>
-          <li class="exam" data-search="transaminases (asat, alat) tgo tgp bilan hepatique foie" data-domain="biochimie"><span class="exam-name">Transaminases (ASAT, ALAT)</span><span class="exam-aka">tgo, tgp, bilan hépatique, foie</span></li>
-          <li class="exam" data-search="gamma gt ggt" data-domain="biochimie"><span class="exam-name">Gamma GT</span><span class="exam-aka">ggt</span></li>
+          <li class="exam" data-search="cholesterol total " data-domain="biochimie"><span class="exam-name">Cholestérol total</span></li>
+          <li class="exam" data-search="hdl-cholesterol bon cholesterol" data-domain="biochimie"><span class="exam-name">HDL-cholestérol</span><span class="exam-aka">bon cholestérol</span></li>
+          <li class="exam" data-search="ldl-cholesterol mauvais cholesterol" data-domain="biochimie"><span class="exam-name">LDL-cholestérol</span><span class="exam-aka">mauvais cholestérol</span></li>
+          <li class="exam" data-search="triglycerides tg" data-domain="biochimie"><span class="exam-name">Triglycérides</span><span class="exam-aka">tg</span></li>
+          <li class="exam" data-search="bilan lipidique complet (eal) exploration anomalie lipidique" data-domain="biochimie"><span class="exam-name">Bilan lipidique complet (EAL)</span><span class="exam-aka">exploration anomalie lipidique</span></li>
+          <li class="exam" data-search="asat (tgo) transaminases tgo" data-domain="biochimie"><span class="exam-name">ASAT (TGO)</span><span class="exam-aka">transaminases, tgo</span></li>
+          <li class="exam" data-search="alat (tgp) transaminases tgp" data-domain="biochimie"><span class="exam-name">ALAT (TGP)</span><span class="exam-aka">transaminases, tgp</span></li>
+          <li class="exam" data-search="gamma-gt ggt" data-domain="biochimie"><span class="exam-name">Gamma-GT</span><span class="exam-aka">ggt</span></li>
           <li class="exam" data-search="phosphatases alcalines pal" data-domain="biochimie"><span class="exam-name">Phosphatases alcalines</span><span class="exam-aka">pal</span></li>
-          <li class="exam" data-search="bilirubine ictere" data-domain="biochimie"><span class="exam-name">Bilirubine</span><span class="exam-aka">ictère</span></li>
-          <li class="exam" data-search="ionogramme sanguin sodium potassium chlore na k" data-domain="biochimie"><span class="exam-name">Ionogramme sanguin</span><span class="exam-aka">sodium, potassium, chlore, na, k</span></li>
+          <li class="exam" data-search="bilirubine totale et conjuguee ictere" data-domain="biochimie"><span class="exam-name">Bilirubine totale et conjuguée</span><span class="exam-aka">ictère</span></li>
+          <li class="exam" data-search="ldh lactate deshydrogenase" data-domain="biochimie"><span class="exam-name">LDH</span><span class="exam-aka">lactate déshydrogénase</span></li>
+          <li class="exam" data-search="amylase amylasemie pancreas" data-domain="biochimie"><span class="exam-name">Amylase</span><span class="exam-aka">amylasémie, pancréas</span></li>
+          <li class="exam" data-search="lipase pancreas" data-domain="biochimie"><span class="exam-name">Lipase</span><span class="exam-aka">pancréas</span></li>
+          <li class="exam" data-search="cpk creatine phosphokinase cpk totale" data-domain="biochimie"><span class="exam-name">CPK</span><span class="exam-aka">créatine phosphokinase, cpk totale</span></li>
+          <li class="exam" data-search="ionogramme sanguin sodium potassium chlore na k cl" data-domain="biochimie"><span class="exam-name">Ionogramme sanguin</span><span class="exam-aka">sodium, potassium, chlore, na, k, cl</span></li>
+          <li class="exam" data-search="ionogramme urinaire " data-domain="biochimie"><span class="exam-name">Ionogramme urinaire</span></li>
           <li class="exam" data-search="calcium calcemie" data-domain="biochimie"><span class="exam-name">Calcium</span><span class="exam-aka">calcémie</span></li>
+          <li class="exam" data-search="calcium ionise " data-domain="biochimie"><span class="exam-name">Calcium ionisé</span></li>
           <li class="exam" data-search="phosphore phosphoremie" data-domain="biochimie"><span class="exam-name">Phosphore</span><span class="exam-aka">phosphorémie</span></li>
-          <li class="exam" data-search="magnesium " data-domain="biochimie"><span class="exam-name">Magnésium</span></li>
-          <li class="exam" data-search="proteines totales / albumine protidemie" data-domain="biochimie"><span class="exam-name">Protéines totales / Albumine</span><span class="exam-aka">protidémie</span></li>
+          <li class="exam" data-search="magnesium magnesemie" data-domain="biochimie"><span class="exam-name">Magnésium</span><span class="exam-aka">magnésémie</span></li>
+          <li class="exam" data-search="proteines totales protidemie" data-domain="biochimie"><span class="exam-name">Protéines totales</span><span class="exam-aka">protidémie</span></li>
+          <li class="exam" data-search="albumine albuminemie" data-domain="biochimie"><span class="exam-name">Albumine</span><span class="exam-aka">albuminémie</span></li>
           <li class="exam" data-search="crp proteine c reactive inflammation" data-domain="biochimie"><span class="exam-name">CRP</span><span class="exam-aka">protéine c réactive, inflammation</span></li>
-          <li class="exam" data-search="fer serique sideremie" data-domain="biochimie"><span class="exam-name">Fer sérique</span><span class="exam-aka">sidérémie</span></li>
-          <li class="exam" data-search="ferritine reserves en fer" data-domain="biochimie"><span class="exam-name">Ferritine</span><span class="exam-aka">réserves en fer</span></li>
+          <li class="exam" data-search="crp ultra-sensible crp us risque cardiovasculaire" data-domain="biochimie"><span class="exam-name">CRP ultra-sensible</span><span class="exam-aka">crp us, risque cardiovasculaire</span></li>
+          <li class="exam" data-search="procalcitonine pct sepsis" data-domain="biochimie"><span class="exam-name">Procalcitonine</span><span class="exam-aka">pct, sepsis</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="martial">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Bilan martial & anémie <span class="cat-count">8</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="fer serique sideremie" data-domain="martial"><span class="exam-name">Fer sérique</span><span class="exam-aka">sidérémie</span></li>
+          <li class="exam" data-search="ferritine reserves en fer" data-domain="martial"><span class="exam-name">Ferritine</span><span class="exam-aka">réserves en fer</span></li>
+          <li class="exam" data-search="transferrine " data-domain="martial"><span class="exam-name">Transferrine</span></li>
+          <li class="exam" data-search="coefficient de saturation de la transferrine cst" data-domain="martial"><span class="exam-name">Coefficient de saturation de la transferrine</span><span class="exam-aka">cst</span></li>
+          <li class="exam" data-search="capacite totale de fixation (ctf) " data-domain="martial"><span class="exam-name">Capacité totale de fixation (CTF)</span></li>
+          <li class="exam" data-search="vitamine b12 b12 cobalamine" data-domain="martial"><span class="exam-name">Vitamine B12</span><span class="exam-aka">b12, cobalamine</span></li>
+          <li class="exam" data-search="folates (vitamine b9) acide folique b9" data-domain="martial"><span class="exam-name">Folates (vitamine B9)</span><span class="exam-aka">acide folique, b9</span></li>
+          <li class="exam" data-search="haptoglobine hemolyse" data-domain="martial"><span class="exam-name">Haptoglobine</span><span class="exam-aka">hémolyse</span></li>
         </ul>
       </section>
       <section class="cat-domain" data-domain="hematologie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Hématologie <span class="cat-count">5</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Hématologie <span class="cat-count">7</span></h2>
         <ul class="exam-list">
-          <li class="exam" data-search="fns / nfs (hemogramme) formule numeration sanguine globules plaquettes" data-domain="hematologie"><span class="exam-name">FNS / NFS (hémogramme)</span><span class="exam-aka">formule numération sanguine, globules, plaquettes</span></li>
-          <li class="exam" data-search="groupe sanguin abo-rhesus groupage rhesus" data-domain="hematologie"><span class="exam-name">Groupe sanguin ABO-Rhésus</span><span class="exam-aka">groupage, rhesus</span></li>
+          <li class="exam" data-search="fns / nfs (hemogramme) formule numeration sanguine globules plaquettes gb gr" data-domain="hematologie"><span class="exam-name">FNS / NFS (hémogramme)</span><span class="exam-aka">formule numération sanguine, globules, plaquettes, gb, gr</span></li>
+          <li class="exam" data-search="numeration des reticulocytes reticulocytes" data-domain="hematologie"><span class="exam-name">Numération des réticulocytes</span><span class="exam-aka">réticulocytes</span></li>
+          <li class="exam" data-search="frottis sanguin frottis peripherique" data-domain="hematologie"><span class="exam-name">Frottis sanguin</span><span class="exam-aka">frottis périphérique</span></li>
           <li class="exam" data-search="vitesse de sedimentation (vs) sedimentation" data-domain="hematologie"><span class="exam-name">Vitesse de sédimentation (VS)</span><span class="exam-aka">sedimentation</span></li>
-          <li class="exam" data-search="reticulocytes " data-domain="hematologie"><span class="exam-name">Réticulocytes</span></li>
-          <li class="exam" data-search="electrophorese de l'hemoglobine drepanocytose thalassemie" data-domain="hematologie"><span class="exam-name">Électrophorèse de l'hémoglobine</span><span class="exam-aka">drépanocytose, thalassémie</span></li>
+          <li class="exam" data-search="electrophorese de l'hemoglobine drepanocytose thalassemie hbs" data-domain="hematologie"><span class="exam-name">Électrophorèse de l'hémoglobine</span><span class="exam-aka">drépanocytose, thalassémie, hbs</span></li>
+          <li class="exam" data-search="test de coombs direct tcd" data-domain="hematologie"><span class="exam-name">Test de Coombs direct</span><span class="exam-aka">tcd</span></li>
+          <li class="exam" data-search="myelogramme moelle osseuse" data-domain="hematologie"><span class="exam-name">Myélogramme</span><span class="exam-aka">moelle osseuse</span><span class="exam-meta">Transmis à un partenaire</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="immuno-hema">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Immuno-hématologie / Groupe <span class="cat-count">4</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="groupe sanguin abo-rhesus groupage rhesus abo" data-domain="immuno-hema"><span class="exam-name">Groupe sanguin ABO-Rhésus</span><span class="exam-aka">groupage, rhesus, abo</span></li>
+          <li class="exam" data-search="phenotype rhesus-kell phenotypage" data-domain="immuno-hema"><span class="exam-name">Phénotype Rhésus-Kell</span><span class="exam-aka">phénotypage</span></li>
+          <li class="exam" data-search="recherche d'agglutinines irregulieres (rai) rai" data-domain="immuno-hema"><span class="exam-name">Recherche d'agglutinines irrégulières (RAI)</span><span class="exam-aka">rai</span></li>
+          <li class="exam" data-search="test de coombs indirect tci" data-domain="immuno-hema"><span class="exam-name">Test de Coombs indirect</span><span class="exam-aka">tci</span></li>
         </ul>
       </section>
       <section class="cat-domain" data-domain="hemostase">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Hémostase <span class="cat-count">4</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Hémostase / Coagulation <span class="cat-count">8</span></h2>
         <ul class="exam-list">
-          <li class="exam" data-search="tp / inr taux de prothrombine avk" data-domain="hemostase"><span class="exam-name">TP / INR</span><span class="exam-aka">taux de prothrombine, avk</span></li>
-          <li class="exam" data-search="tca temps de cephaline activee" data-domain="hemostase"><span class="exam-name">TCA</span><span class="exam-aka">temps de céphaline activée</span></li>
+          <li class="exam" data-search="tp / inr taux de prothrombine avk inr" data-domain="hemostase"><span class="exam-name">TP / INR</span><span class="exam-aka">taux de prothrombine, avk, inr</span></li>
+          <li class="exam" data-search="tca temps de cephaline activee tca" data-domain="hemostase"><span class="exam-name">TCA</span><span class="exam-aka">temps de céphaline activée, tca</span></li>
           <li class="exam" data-search="fibrinogene " data-domain="hemostase"><span class="exam-name">Fibrinogène</span></li>
-          <li class="exam" data-search="d-dimeres ddimeres thrombose" data-domain="hemostase"><span class="exam-name">D-dimères</span><span class="exam-aka">ddimeres, thrombose</span></li>
+          <li class="exam" data-search="d-dimeres ddimeres thrombose embolie" data-domain="hemostase"><span class="exam-name">D-dimères</span><span class="exam-aka">ddimeres, thrombose, embolie</span></li>
+          <li class="exam" data-search="temps de thrombine (tt) " data-domain="hemostase"><span class="exam-name">Temps de thrombine (TT)</span></li>
+          <li class="exam" data-search="facteurs de coagulation " data-domain="hemostase"><span class="exam-name">Facteurs de coagulation</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="antithrombine iii at3" data-domain="hemostase"><span class="exam-name">Antithrombine III</span><span class="exam-aka">at3</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="proteine c / proteine s thrombophilie" data-domain="hemostase"><span class="exam-name">Protéine C / Protéine S</span><span class="exam-aka">thrombophilie</span><span class="exam-meta">Transmis à un partenaire</span></li>
         </ul>
       </section>
-      <section class="cat-domain" data-domain="hormonologie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Hormonologie <span class="cat-count">13</span></h2>
+      <section class="cat-domain" data-domain="diabeto-cardio">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Marqueurs cardiaques <span class="cat-count">5</span></h2>
         <ul class="exam-list">
-          <li class="exam" data-search="tsh thyroide thyroide" data-domain="hormonologie"><span class="exam-name">TSH</span><span class="exam-aka">thyroïde, thyroide</span></li>
-          <li class="exam" data-search="t3 libre / t4 libre ft3 ft4 thyroide" data-domain="hormonologie"><span class="exam-name">T3 libre / T4 libre</span><span class="exam-aka">ft3, ft4, thyroïde</span></li>
-          <li class="exam" data-search="anticorps anti-tpo anti tpo thyroidite" data-domain="hormonologie"><span class="exam-name">Anticorps anti-TPO</span><span class="exam-aka">anti tpo, thyroïdite</span></li>
-          <li class="exam" data-search="beta-hcg grossesse hcg" data-domain="hormonologie"><span class="exam-name">Bêta-HCG</span><span class="exam-aka">grossesse, hcg</span></li>
-          <li class="exam" data-search="prolactine " data-domain="hormonologie"><span class="exam-name">Prolactine</span></li>
-          <li class="exam" data-search="fsh / lh fertilite" data-domain="hormonologie"><span class="exam-name">FSH / LH</span><span class="exam-aka">fertilité</span></li>
-          <li class="exam" data-search="œstradiol estradiol" data-domain="hormonologie"><span class="exam-name">Œstradiol</span><span class="exam-aka">estradiol</span></li>
-          <li class="exam" data-search="progesterone " data-domain="hormonologie"><span class="exam-name">Progestérone</span></li>
-          <li class="exam" data-search="testosterone " data-domain="hormonologie"><span class="exam-name">Testostérone</span></li>
-          <li class="exam" data-search="cortisol " data-domain="hormonologie"><span class="exam-name">Cortisol</span></li>
-          <li class="exam" data-search="vitamine d (25-oh) vit d 25 oh" data-domain="hormonologie"><span class="exam-name">Vitamine D (25-OH)</span><span class="exam-aka">vit d, 25 oh</span></li>
-          <li class="exam" data-search="vitamine b12 b12" data-domain="hormonologie"><span class="exam-name">Vitamine B12</span><span class="exam-aka">b12</span></li>
-          <li class="exam" data-search="insuline " data-domain="hormonologie"><span class="exam-name">Insuline</span></li>
+          <li class="exam" data-search="troponine troponine t troponine i infarctus" data-domain="diabeto-cardio"><span class="exam-name">Troponine</span><span class="exam-aka">troponine t, troponine i, infarctus</span></li>
+          <li class="exam" data-search="cpk-mb " data-domain="diabeto-cardio"><span class="exam-name">CPK-MB</span></li>
+          <li class="exam" data-search="bnp / nt-probnp insuffisance cardiaque probnp" data-domain="diabeto-cardio"><span class="exam-name">BNP / NT-proBNP</span><span class="exam-aka">insuffisance cardiaque, proBNP</span></li>
+          <li class="exam" data-search="myoglobine " data-domain="diabeto-cardio"><span class="exam-name">Myoglobine</span></li>
+          <li class="exam" data-search="homocysteine " data-domain="diabeto-cardio"><span class="exam-name">Homocystéine</span><span class="exam-meta">Transmis à un partenaire</span></li>
         </ul>
       </section>
-      <section class="cat-domain" data-domain="immuno-serologie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>Immunologie / Sérologie <span class="cat-count">8</span></h2>
+      <section class="cat-domain" data-domain="thyroide">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Thyroïde <span class="cat-count">7</span></h2>
         <ul class="exam-list">
-          <li class="exam" data-search="serologie hepatite b ag hbs vhb" data-domain="immuno-serologie"><span class="exam-name">Sérologie hépatite B</span><span class="exam-aka">ag hbs, vhb</span></li>
-          <li class="exam" data-search="serologie hepatite c vhc" data-domain="immuno-serologie"><span class="exam-name">Sérologie hépatite C</span><span class="exam-aka">vhc</span></li>
-          <li class="exam" data-search="serologie vih hiv sida" data-domain="immuno-serologie"><span class="exam-name">Sérologie VIH</span><span class="exam-aka">hiv, sida</span></li>
-          <li class="exam" data-search="serologie toxoplasmose toxo" data-domain="immuno-serologie"><span class="exam-name">Sérologie toxoplasmose</span><span class="exam-aka">toxo</span></li>
-          <li class="exam" data-search="serologie rubeole " data-domain="immuno-serologie"><span class="exam-name">Sérologie rubéole</span></li>
-          <li class="exam" data-search="facteur rhumatoide latex waaler rose" data-domain="immuno-serologie"><span class="exam-name">Facteur rhumatoïde</span><span class="exam-aka">latex waaler rose</span></li>
-          <li class="exam" data-search="anticorps antinucleaires (aan) auto-immunite" data-domain="immuno-serologie"><span class="exam-name">Anticorps antinucléaires (AAN)</span><span class="exam-aka">auto-immunité</span></li>
-          <li class="exam" data-search="aslo antistreptolysines" data-domain="immuno-serologie"><span class="exam-name">ASLO</span><span class="exam-aka">antistreptolysines</span></li>
+          <li class="exam" data-search="tsh thyroide thyroide tsh us" data-domain="thyroide"><span class="exam-name">TSH</span><span class="exam-aka">thyroïde, thyroide, tsh us</span></li>
+          <li class="exam" data-search="t4 libre (ft4) ft4 thyroxine" data-domain="thyroide"><span class="exam-name">T4 libre (FT4)</span><span class="exam-aka">ft4, thyroxine</span></li>
+          <li class="exam" data-search="t3 libre (ft3) ft3" data-domain="thyroide"><span class="exam-name">T3 libre (FT3)</span><span class="exam-aka">ft3</span></li>
+          <li class="exam" data-search="anticorps anti-tpo anti tpo thyroidite hashimoto" data-domain="thyroide"><span class="exam-name">Anticorps anti-TPO</span><span class="exam-aka">anti tpo, thyroïdite, hashimoto</span></li>
+          <li class="exam" data-search="anticorps anti-thyroglobuline anti tg" data-domain="thyroide"><span class="exam-name">Anticorps anti-thyroglobuline</span><span class="exam-aka">anti tg</span></li>
+          <li class="exam" data-search="anticorps anti-recepteurs tsh (trak) trak basedow" data-domain="thyroide"><span class="exam-name">Anticorps anti-récepteurs TSH (TRAK)</span><span class="exam-aka">trak, basedow</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="thyroglobuline tg" data-domain="thyroide"><span class="exam-name">Thyroglobuline</span><span class="exam-aka">tg</span><span class="exam-meta">Transmis à un partenaire</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="hormono-repro">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Hormones de la reproduction <span class="cat-count">12</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="beta-hcg grossesse hcg" data-domain="hormono-repro"><span class="exam-name">Bêta-HCG</span><span class="exam-aka">grossesse, hcg</span></li>
+          <li class="exam" data-search="fsh fertilite" data-domain="hormono-repro"><span class="exam-name">FSH</span><span class="exam-aka">fertilité</span></li>
+          <li class="exam" data-search="lh fertilite ovulation" data-domain="hormono-repro"><span class="exam-name">LH</span><span class="exam-aka">fertilité, ovulation</span></li>
+          <li class="exam" data-search="œstradiol (e2) estradiol" data-domain="hormono-repro"><span class="exam-name">Œstradiol (E2)</span><span class="exam-aka">estradiol</span></li>
+          <li class="exam" data-search="progesterone " data-domain="hormono-repro"><span class="exam-name">Progestérone</span></li>
+          <li class="exam" data-search="prolactine " data-domain="hormono-repro"><span class="exam-name">Prolactine</span></li>
+          <li class="exam" data-search="testosterone totale " data-domain="hormono-repro"><span class="exam-name">Testostérone totale</span></li>
+          <li class="exam" data-search="testosterone libre " data-domain="hormono-repro"><span class="exam-name">Testostérone libre</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="delta-4-androstenedione " data-domain="hormono-repro"><span class="exam-name">Delta-4-androstènedione</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="amh (hormone anti-mullerienne) reserve ovarienne" data-domain="hormono-repro"><span class="exam-name">AMH (hormone anti-müllérienne)</span><span class="exam-aka">réserve ovarienne</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="shbg " data-domain="hormono-repro"><span class="exam-name">SHBG</span></li>
+          <li class="exam" data-search="dhea-s sulfate de dhea" data-domain="hormono-repro"><span class="exam-name">DHEA-S</span><span class="exam-aka">sulfate de dhea</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="endocrino">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Endocrinologie / Surrénale <span class="cat-count">7</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="cortisol (8h / 16h) cortisolemie" data-domain="endocrino"><span class="exam-name">Cortisol (8h / 16h)</span><span class="exam-aka">cortisolémie</span></li>
+          <li class="exam" data-search="acth " data-domain="endocrino"><span class="exam-name">ACTH</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="insuline insulinemie" data-domain="endocrino"><span class="exam-name">Insuline</span><span class="exam-aka">insulinémie</span></li>
+          <li class="exam" data-search="peptide c " data-domain="endocrino"><span class="exam-name">Peptide C</span></li>
+          <li class="exam" data-search="parathormone (pth) pth" data-domain="endocrino"><span class="exam-name">Parathormone (PTH)</span><span class="exam-aka">pth</span></li>
+          <li class="exam" data-search="aldosterone / renine " data-domain="endocrino"><span class="exam-name">Aldostérone / Rénine</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="igf-1 (somatomedine c) igf1 hormone de croissance" data-domain="endocrino"><span class="exam-name">IGF-1 (somatomédine C)</span><span class="exam-aka">igf1, hormone de croissance</span><span class="exam-meta">Transmis à un partenaire</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="vitamines">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2"/><path d="M7 15h10"/></svg></span>Vitamines & oligo-éléments <span class="cat-count">8</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="vitamine d (25-oh) vit d 25 oh vitamine d" data-domain="vitamines"><span class="exam-name">Vitamine D (25-OH)</span><span class="exam-aka">vit d, 25 oh vitamine d</span></li>
+          <li class="exam" data-search="vitamine b12 cobalamine" data-domain="vitamines"><span class="exam-name">Vitamine B12</span><span class="exam-aka">cobalamine</span></li>
+          <li class="exam" data-search="folates seriques (b9) acide folique" data-domain="vitamines"><span class="exam-name">Folates sériques (B9)</span><span class="exam-aka">acide folique</span></li>
+          <li class="exam" data-search="vitamine a " data-domain="vitamines"><span class="exam-name">Vitamine A</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="vitamine e " data-domain="vitamines"><span class="exam-name">Vitamine E</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="zinc " data-domain="vitamines"><span class="exam-name">Zinc</span></li>
+          <li class="exam" data-search="cuivre " data-domain="vitamines"><span class="exam-name">Cuivre</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="selenium " data-domain="vitamines"><span class="exam-name">Sélénium</span><span class="exam-meta">Transmis à un partenaire</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="proteines">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2"/><path d="M7 15h10"/></svg></span>Protéines & électrophorèse <span class="cat-count">7</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="electrophorese des proteines seriques epp eps" data-domain="proteines"><span class="exam-name">Électrophorèse des protéines sériques</span><span class="exam-aka">epp, eps</span></li>
+          <li class="exam" data-search="immunofixation immunoelectrophorese" data-domain="proteines"><span class="exam-name">Immunofixation</span><span class="exam-aka">immunoélectrophorèse</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="proteinurie des 24h proteines urinaires" data-domain="proteines"><span class="exam-name">Protéinurie des 24h</span><span class="exam-aka">protéines urinaires</span></li>
+          <li class="exam" data-search="microalbuminurie albuminurie nephropathie" data-domain="proteines"><span class="exam-name">Microalbuminurie</span><span class="exam-aka">albuminurie, néphropathie</span></li>
+          <li class="exam" data-search="beta-2-microglobuline " data-domain="proteines"><span class="exam-name">Bêta-2-microglobuline</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="haptoglobine " data-domain="proteines"><span class="exam-name">Haptoglobine</span></li>
+          <li class="exam" data-search="complement c3 / c4 " data-domain="proteines"><span class="exam-name">Complément C3 / C4</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="immuno-auto">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>Immunologie / Auto-immunité <span class="cat-count">9</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="facteur rhumatoide latex waaler rose" data-domain="immuno-auto"><span class="exam-name">Facteur rhumatoïde</span><span class="exam-aka">latex, waaler rose</span></li>
+          <li class="exam" data-search="anticorps anti-ccp anti ccp polyarthrite" data-domain="immuno-auto"><span class="exam-name">Anticorps anti-CCP</span><span class="exam-aka">anti ccp, polyarthrite</span></li>
+          <li class="exam" data-search="anticorps antinucleaires (aan / fan) aan lupus" data-domain="immuno-auto"><span class="exam-name">Anticorps antinucléaires (AAN / FAN)</span><span class="exam-aka">aan, lupus</span></li>
+          <li class="exam" data-search="anticorps anti-dna natif anti adn" data-domain="immuno-auto"><span class="exam-name">Anticorps anti-DNA natif</span><span class="exam-aka">anti adn</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="anticorps anti-ect (ena) ssa ssb sm" data-domain="immuno-auto"><span class="exam-name">Anticorps anti-ECT (ENA)</span><span class="exam-aka">ssa, ssb, sm</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="anca vascularite" data-domain="immuno-auto"><span class="exam-name">ANCA</span><span class="exam-aka">vascularite</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="anticorps anti-transglutaminase maladie coeliaque cœliaque" data-domain="immuno-auto"><span class="exam-name">Anticorps anti-transglutaminase</span><span class="exam-aka">maladie coeliaque, cœliaque</span></li>
+          <li class="exam" data-search="iga / igg / igm totales immunoglobulines" data-domain="immuno-auto"><span class="exam-name">IgA / IgG / IgM totales</span><span class="exam-aka">immunoglobulines</span></li>
+          <li class="exam" data-search="ige totales allergie" data-domain="immuno-auto"><span class="exam-name">IgE totales</span><span class="exam-aka">allergie</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="allergo">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>Allergologie <span class="cat-count">3</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="ige specifiques (par allergene) rast allergene" data-domain="allergo"><span class="exam-name">IgE spécifiques (par allergène)</span><span class="exam-aka">rast, allergène</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="phadiatop depistage allergie respiratoire" data-domain="allergo"><span class="exam-name">Phadiatop</span><span class="exam-aka">dépistage allergie respiratoire</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="trophatop depistage allergie alimentaire" data-domain="allergo"><span class="exam-name">Trophatop</span><span class="exam-aka">dépistage allergie alimentaire</span><span class="exam-meta">Transmis à un partenaire</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="serologie">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>Sérologies infectieuses <span class="cat-count">13</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="serologie hepatite b (ag hbs, ac anti-hbs, anti-hbc) ag hbs vhb hepatite b" data-domain="serologie"><span class="exam-name">Sérologie hépatite B (Ag HBs, Ac anti-HBs, anti-HBc)</span><span class="exam-aka">ag hbs, vhb, hépatite b</span></li>
+          <li class="exam" data-search="serologie hepatite c vhc hepatite c" data-domain="serologie"><span class="exam-name">Sérologie hépatite C</span><span class="exam-aka">vhc, hépatite c</span></li>
+          <li class="exam" data-search="serologie vih hiv sida" data-domain="serologie"><span class="exam-name">Sérologie VIH</span><span class="exam-aka">hiv, sida</span></li>
+          <li class="exam" data-search="serologie syphilis (tpha-vdrl) tpha vdrl" data-domain="serologie"><span class="exam-name">Sérologie syphilis (TPHA-VDRL)</span><span class="exam-aka">tpha, vdrl</span></li>
+          <li class="exam" data-search="serologie toxoplasmose (igg/igm) toxo" data-domain="serologie"><span class="exam-name">Sérologie toxoplasmose (IgG/IgM)</span><span class="exam-aka">toxo</span></li>
+          <li class="exam" data-search="serologie rubeole (igg/igm) " data-domain="serologie"><span class="exam-name">Sérologie rubéole (IgG/IgM)</span></li>
+          <li class="exam" data-search="serologie cmv cytomegalovirus" data-domain="serologie"><span class="exam-name">Sérologie CMV</span><span class="exam-aka">cytomégalovirus</span></li>
+          <li class="exam" data-search="serologie ebv (mni) mononucleose epstein barr" data-domain="serologie"><span class="exam-name">Sérologie EBV (MNI)</span><span class="exam-aka">mononucléose, epstein barr</span></li>
+          <li class="exam" data-search="serologie helicobacter pylori h pylori" data-domain="serologie"><span class="exam-name">Sérologie Helicobacter pylori</span><span class="exam-aka">h pylori</span></li>
+          <li class="exam" data-search="aslo antistreptolysines" data-domain="serologie"><span class="exam-name">ASLO</span><span class="exam-aka">antistreptolysines</span></li>
+          <li class="exam" data-search="serologie widal-felix typhoide" data-domain="serologie"><span class="exam-name">Sérologie Widal-Félix</span><span class="exam-aka">typhoïde</span></li>
+          <li class="exam" data-search="serologie rose de bengale / wright brucellose" data-domain="serologie"><span class="exam-name">Sérologie Rose de Bengale / Wright</span><span class="exam-aka">brucellose</span></li>
+          <li class="exam" data-search="serologie coqueluche " data-domain="serologie"><span class="exam-name">Sérologie coqueluche</span><span class="exam-meta">Transmis à un partenaire</span></li>
         </ul>
       </section>
       <section class="cat-domain" data-domain="microbiologie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="10" cy="11" r="1.3"/><circle cx="14" cy="14" r="1.3"/></svg></span>Microbiologie <span class="cat-count">6</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="10" cy="11" r="1.3"/><circle cx="14" cy="14" r="1.3"/></svg></span>Microbiologie / Bactériologie <span class="cat-count">11</span></h2>
         <ul class="exam-list">
           <li class="exam" data-search="ecbu examen cytobacteriologique des urines urines infection urinaire" data-domain="microbiologie"><span class="exam-name">ECBU</span><span class="exam-aka">examen cytobactériologique des urines, urines, infection urinaire</span></li>
-          <li class="exam" data-search="prelevement vaginal pv" data-domain="microbiologie"><span class="exam-name">Prélèvement vaginal</span><span class="exam-aka">pv</span></li>
+          <li class="exam" data-search="antibiogramme atb" data-domain="microbiologie"><span class="exam-name">Antibiogramme</span><span class="exam-aka">atb</span></li>
+          <li class="exam" data-search="prelevement vaginal (pv) pv leucorrhee" data-domain="microbiologie"><span class="exam-name">Prélèvement vaginal (PV)</span><span class="exam-aka">pv, leucorrhée</span></li>
+          <li class="exam" data-search="prelevement uretral " data-domain="microbiologie"><span class="exam-name">Prélèvement urétral</span></li>
           <li class="exam" data-search="spermoculture " data-domain="microbiologie"><span class="exam-name">Spermoculture</span></li>
           <li class="exam" data-search="coproculture selles" data-domain="microbiologie"><span class="exam-name">Coproculture</span><span class="exam-aka">selles</span></li>
-          <li class="exam" data-search="prelevement de gorge angine" data-domain="microbiologie"><span class="exam-name">Prélèvement de gorge</span><span class="exam-aka">angine</span></li>
-          <li class="exam" data-search="antibiogramme atb" data-domain="microbiologie"><span class="exam-name">Antibiogramme</span><span class="exam-aka">atb</span></li>
+          <li class="exam" data-search="prelevement de gorge angine streptotest" data-domain="microbiologie"><span class="exam-name">Prélèvement de gorge</span><span class="exam-aka">angine, streptotest</span></li>
+          <li class="exam" data-search="prelevement cutane / pus plaie suppuration" data-domain="microbiologie"><span class="exam-name">Prélèvement cutané / pus</span><span class="exam-aka">plaie, suppuration</span></li>
+          <li class="exam" data-search="recherche de bk (tuberculose) bacille de koch baar" data-domain="microbiologie"><span class="exam-name">Recherche de BK (tuberculose)</span><span class="exam-aka">bacille de koch, baar</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="hemoculture septicemie" data-domain="microbiologie"><span class="exam-name">Hémoculture</span><span class="exam-aka">septicémie</span></li>
+          <li class="exam" data-search="chlamydia / mycoplasmes (pcr) ist pcr" data-domain="microbiologie"><span class="exam-name">Chlamydia / Mycoplasmes (PCR)</span><span class="exam-aka">ist, pcr</span><span class="exam-meta">Transmis à un partenaire</span></li>
         </ul>
       </section>
       <section class="cat-domain" data-domain="parasitologie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="10" cy="11" r="1.3"/><circle cx="14" cy="14" r="1.3"/></svg></span>Parasitologie / Mycologie <span class="cat-count">3</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="10" cy="11" r="1.3"/><circle cx="14" cy="14" r="1.3"/></svg></span>Parasitologie / Mycologie <span class="cat-count">5</span></h2>
         <ul class="exam-list">
-          <li class="exam" data-search="examen parasitologique des selles parasites kop" data-domain="parasitologie"><span class="exam-name">Examen parasitologique des selles</span><span class="exam-aka">parasites, kop</span></li>
+          <li class="exam" data-search="examen parasitologique des selles parasites kop copro parasito" data-domain="parasitologie"><span class="exam-name">Examen parasitologique des selles</span><span class="exam-aka">parasites, kop, copro parasito</span></li>
           <li class="exam" data-search="scotch-test anal oxyures" data-domain="parasitologie"><span class="exam-name">Scotch-test anal</span><span class="exam-aka">oxyures</span></li>
-          <li class="exam" data-search="prelevement mycologique mycose champignon" data-domain="parasitologie"><span class="exam-name">Prélèvement mycologique</span><span class="exam-aka">mycose, champignon</span></li>
+          <li class="exam" data-search="recherche de sang dans les selles sang occulte hemoccult" data-domain="parasitologie"><span class="exam-name">Recherche de sang dans les selles</span><span class="exam-aka">sang occulte, hémoccult</span></li>
+          <li class="exam" data-search="prelevement mycologique mycose champignon dermatophyte" data-domain="parasitologie"><span class="exam-name">Prélèvement mycologique</span><span class="exam-aka">mycose, champignon, dermatophyte</span></li>
+          <li class="exam" data-search="goutte epaisse / frottis (paludisme) paludisme malaria" data-domain="parasitologie"><span class="exam-name">Goutte épaisse / frottis (paludisme)</span><span class="exam-aka">paludisme, malaria</span></li>
         </ul>
       </section>
       <section class="cat-domain" data-domain="marqueurs">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Marqueurs tumoraux <span class="cat-count">6</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Marqueurs tumoraux <span class="cat-count">12</span></h2>
         <ul class="exam-list">
-          <li class="exam" data-search="psa prostate" data-domain="marqueurs"><span class="exam-name">PSA</span><span class="exam-aka">prostate</span></li>
-          <li class="exam" data-search="cea (ace) " data-domain="marqueurs"><span class="exam-name">CEA (ACE)</span></li>
-          <li class="exam" data-search="ca 15-3 " data-domain="marqueurs"><span class="exam-name">CA 15-3</span></li>
-          <li class="exam" data-search="ca 125 " data-domain="marqueurs"><span class="exam-name">CA 125</span></li>
-          <li class="exam" data-search="ca 19-9 " data-domain="marqueurs"><span class="exam-name">CA 19-9</span></li>
+          <li class="exam" data-search="psa total prostate" data-domain="marqueurs"><span class="exam-name">PSA total</span><span class="exam-aka">prostate</span></li>
+          <li class="exam" data-search="psa libre rapport psa libre/total" data-domain="marqueurs"><span class="exam-name">PSA libre</span><span class="exam-aka">rapport psa libre/total</span></li>
+          <li class="exam" data-search="cea (ace) antigene carcino-embryonnaire" data-domain="marqueurs"><span class="exam-name">CEA (ACE)</span><span class="exam-aka">antigène carcino-embryonnaire</span></li>
           <li class="exam" data-search="alpha-fœtoproteine (afp) afp" data-domain="marqueurs"><span class="exam-name">Alpha-fœtoprotéine (AFP)</span><span class="exam-aka">afp</span></li>
+          <li class="exam" data-search="ca 15-3 sein" data-domain="marqueurs"><span class="exam-name">CA 15-3</span><span class="exam-aka">sein</span></li>
+          <li class="exam" data-search="ca 125 ovaire" data-domain="marqueurs"><span class="exam-name">CA 125</span><span class="exam-aka">ovaire</span></li>
+          <li class="exam" data-search="ca 19-9 digestif pancreas" data-domain="marqueurs"><span class="exam-name">CA 19-9</span><span class="exam-aka">digestif, pancréas</span></li>
+          <li class="exam" data-search="ca 72-4 " data-domain="marqueurs"><span class="exam-name">CA 72-4</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="calcitonine " data-domain="marqueurs"><span class="exam-name">Calcitonine</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="thyroglobuline (suivi) " data-domain="marqueurs"><span class="exam-name">Thyroglobuline (suivi)</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="nse enolase neurospecifique" data-domain="marqueurs"><span class="exam-name">NSE</span><span class="exam-aka">énolase neurospécifique</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="scc " data-domain="marqueurs"><span class="exam-name">SCC</span><span class="exam-meta">Transmis à un partenaire</span></li>
         </ul>
       </section>
       <section class="cat-domain" data-domain="spermiologie">
-        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Spermiologie <span class="cat-count">2</span></h2>
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.5-6-11.5z"/></svg></span>Spermiologie <span class="cat-count">4</span></h2>
         <ul class="exam-list">
           <li class="exam" data-search="spermogramme fertilite sperme" data-domain="spermiologie"><span class="exam-name">Spermogramme</span><span class="exam-aka">fertilité, sperme</span></li>
           <li class="exam" data-search="spermocytogramme " data-domain="spermiologie"><span class="exam-name">Spermocytogramme</span></li>
+          <li class="exam" data-search="test de migration-survie (tms) " data-domain="spermiologie"><span class="exam-name">Test de migration-survie (TMS)</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="spermoculture " data-domain="spermiologie"><span class="exam-name">Spermoculture</span></li>
+        </ul>
+      </section>
+      <section class="cat-domain" data-domain="toxico">
+        <h2 class="cat-domain-title"><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2"/><path d="M7 15h10"/></svg></span>Suivi thérapeutique & toxicologie <span class="cat-count">5</span></h2>
+        <ul class="exam-list">
+          <li class="exam" data-search="lithium lithemie" data-domain="toxico"><span class="exam-name">Lithium</span><span class="exam-aka">lithémie</span></li>
+          <li class="exam" data-search="digoxine " data-domain="toxico"><span class="exam-name">Digoxine</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="acide valproique (depakine) " data-domain="toxico"><span class="exam-name">Acide valproïque (Dépakine)</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="carbamazepine " data-domain="toxico"><span class="exam-name">Carbamazépine</span><span class="exam-meta">Transmis à un partenaire</span></li>
+          <li class="exam" data-search="recherche de toxiques urinaires drogues stupefiants" data-domain="toxico"><span class="exam-name">Recherche de toxiques urinaires</span><span class="exam-aka">drogues, stupéfiants</span><span class="exam-meta">Transmis à un partenaire</span></li>
         </ul>
       </section>
       <p class="cat-empty" id="catEmpty" hidden>Aucun examen ne correspond à votre recherche. Appelez-nous au <a href="tel:+213770280820">0770 280 820</a> avec votre ordonnance.</p>
