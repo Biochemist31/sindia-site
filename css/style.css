@@ -349,3 +349,104 @@ div.todo, p.todo { display: block; padding: 12px 14px; margin: 0 0 12px; }
   .hero { padding: 56px 0; }
   h1 { font-size: 2.4rem; }
 }
+
+/* =========================================================
+   Catalogue d'examens + animations (ajout design)
+   Tout est désactivé si l'utilisateur préfère moins d'animations,
+   et le contenu reste visible sans JavaScript.
+   ========================================================= */
+
+/* ---------- Hero : fond animé (aurores) ---------- */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+.hero > .container { position: relative; z-index: 2; }
+.hero::before, .hero::after {
+  content: ""; position: absolute; z-index: 1; border-radius: 50%;
+  filter: blur(60px); opacity: .55; pointer-events: none;
+}
+.hero::before {
+  width: 320px; height: 320px; top: -120px; right: -60px;
+  background: radial-gradient(circle at 30% 30%, var(--yellow), transparent 70%);
+  animation: drift1 14s ease-in-out infinite;
+}
+.hero::after {
+  width: 360px; height: 360px; bottom: -160px; left: -80px;
+  background: radial-gradient(circle at 60% 40%, #7FB0FF, transparent 70%);
+  animation: drift2 18s ease-in-out infinite;
+}
+@keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-30px,25px) scale(1.12); } }
+@keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(35px,-20px) scale(1.08); } }
+
+/* ---------- Révélation au défilement (ajoutée par JS) ---------- */
+.js .anim-in { opacity: 0; transform: translateY(18px); }
+.js .anim-in.is-visible {
+  opacity: 1; transform: none;
+  transition: opacity .6s ease, transform .6s cubic-bezier(.16,.84,.44,1);
+}
+
+/* ---------- Compteur (note Google) ---------- */
+.count-anim { font-variant-numeric: tabular-nums; }
+
+/* ---------- Catalogue : recherche ---------- */
+.cat-wrap { padding-top: 20px; }
+.cat-search { position: relative; margin: 8px 0 14px; }
+.cat-search-ic {
+  position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  color: var(--blue); pointer-events: none;
+}
+.cat-search-ic svg { width: 22px; height: 22px; }
+#catSearch {
+  width: 100%; min-height: 52px; padding: 12px 16px 12px 48px;
+  font: inherit; font-size: 1.05rem; color: var(--text);
+  background: var(--white); border: 2px solid var(--blue-soft); border-radius: 999px;
+  transition: border-color .2s, box-shadow .2s;
+}
+#catSearch:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(0,103,255,.15); }
+
+/* ---------- Catalogue : filtres (chips) ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  min-height: 40px; padding: 8px 16px; border-radius: 999px;
+  border: 2px solid var(--blue-soft); background: var(--white);
+  font: inherit; font-weight: 600; font-size: .92rem; color: var(--text);
+  cursor: pointer; transition: background .2s, color .2s, border-color .2s, transform .1s;
+}
+.chip:hover { border-color: var(--blue); }
+.chip:active { transform: scale(.96); }
+.chip.is-active { background: var(--blue); border-color: var(--blue); color: var(--white); }
+
+.cat-status { margin: 14px 0 0; color: var(--text-muted); font-size: .9rem; min-height: 1.2em; }
+
+/* ---------- Catalogue : résultats ---------- */
+.cat-results { padding-bottom: 8px; }
+.cat-domain { padding: 20px 0 4px; }
+.cat-domain.is-hidden { display: none; }
+.cat-domain-title { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; }
+.cat-ic { display: inline-flex; color: var(--blue); }
+.cat-ic svg { width: 24px; height: 24px; }
+.cat-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 26px; height: 22px; padding: 0 7px; border-radius: 999px;
+  background: var(--blue-tint); color: var(--blue); font-size: .8rem; font-weight: 700;
+}
+.exam-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.exam {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 12px 14px; border: 1px solid var(--blue-soft); border-radius: 10px;
+  background: var(--white); transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.exam:hover { border-color: var(--blue); box-shadow: 0 2px 10px rgba(0,103,255,.08); transform: translateX(3px); }
+.exam.is-hidden { display: none; }
+.exam-name { font-weight: 600; }
+.exam-aka { font-size: .82rem; color: var(--text-muted); }
+.exam mark { background: var(--yellow); color: var(--text); border-radius: 3px; padding: 0 2px; }
+.cat-empty { padding: 24px 0; color: var(--text-muted); }
+
+@media (min-width: 640px) { .exam-list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .exam-list { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Respect de « moins d'animations » ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero::after { animation: none; }
+  .js .anim-in { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .exam, .chip, #catSearch, .btn, .tile, .card { transition: none !important; }
+}

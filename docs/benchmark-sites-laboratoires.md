@@ -54,3 +54,12 @@ Le 3 novembre 2026, la fiche Google de SinDia affichait **4,7/5 sur 844 avis** (
 - Rendez-vous ou demande de prélèvement à domicile en ligne : par lien WhatsApp (simple) ou par module dédié ?
 - Version arabe du site.
 - Nom de domaine et hébergement : ils sont nécessaires pour le `sitemap.xml`, l'image de partage Open Graph et la mise en ligne.
+
+
+## 7. Catalogue d'examens (ajout nov. 2026)
+
+« Ubilab » (ubilab.io) est une plateforme française qui héberge le manuel de prélèvement / catalogue d'examens de laboratoires (B2A, CHU d'Angers…). La demande « catalogue comme BPR / Ubilab » = un référentiel d'examens recherchable.
+
+Réalisé : moteur de catalogue sur la page « Nos analyses » (recherche instantanée, filtres par domaine, 9 domaines), alimenté par `data/analyses.json`.
+
+Décision assumée : le catalogue est rempli avec une **nomenclature standard** (noms d'examens génériques, communs à tous les laboratoires), pas avec les données reprises de BPR/Ubilab. Copier le catalogue d'un concurrent et le publier comme celui de SinDia poserait un double problème — médical (afficher des examens/conditions non validés pour nos méthodes) et juridique/concurrentiel. Le laboratoire confirme et complète la liste.

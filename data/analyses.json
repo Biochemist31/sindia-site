@@ -1,0 +1,98 @@
+{
+  "_comment": "Catalogue d'examens SinDia. Nomenclature STANDARD de biologie médicale (noms génériques, communs à tous les laboratoires) — PAS la copie d'un catalogue concurrent. Le laboratoire confirme les examens réellement réalisés et complète délais/conditions. 'aka' = synonymes/sigles pour la recherche. Ne PAS ajouter ici de prix, de délai ni de valeur de référence sans validation du biologiste responsable.",
+  "statut": "liste de référence à confirmer par le laboratoire",
+  "domaines": [
+    { "id": "biochimie", "nom": "Biochimie", "icone": "flask",
+      "examens": [
+        {"nom": "Glycémie à jeun", "aka": ["sucre", "glucose"]},
+        {"nom": "Hémoglobine glyquée (HbA1c)", "aka": ["hba1c", "diabète"]},
+        {"nom": "Urée", "aka": []},
+        {"nom": "Créatinine", "aka": ["fonction rénale", "dfg"]},
+        {"nom": "Acide urique", "aka": ["uricémie", "goutte"]},
+        {"nom": "Bilan lipidique", "aka": ["cholestérol", "triglycérides", "hdl", "ldl"]},
+        {"nom": "Transaminases (ASAT, ALAT)", "aka": ["tgo", "tgp", "bilan hépatique", "foie"]},
+        {"nom": "Gamma GT", "aka": ["ggt"]},
+        {"nom": "Phosphatases alcalines", "aka": ["pal"]},
+        {"nom": "Bilirubine", "aka": ["ictère"]},
+        {"nom": "Ionogramme sanguin", "aka": ["sodium", "potassium", "chlore", "na", "k"]},
+        {"nom": "Calcium", "aka": ["calcémie"]},
+        {"nom": "Phosphore", "aka": ["phosphorémie"]},
+        {"nom": "Magnésium", "aka": []},
+        {"nom": "Protéines totales / Albumine", "aka": ["protidémie"]},
+        {"nom": "CRP", "aka": ["protéine c réactive", "inflammation"]},
+        {"nom": "Fer sérique", "aka": ["sidérémie"]},
+        {"nom": "Ferritine", "aka": ["réserves en fer"]}
+      ]},
+    { "id": "hematologie", "nom": "Hématologie", "icone": "drop",
+      "examens": [
+        {"nom": "FNS / NFS (hémogramme)", "aka": ["formule numération sanguine", "globules", "plaquettes"]},
+        {"nom": "Groupe sanguin ABO-Rhésus", "aka": ["groupage", "rhesus"]},
+        {"nom": "Vitesse de sédimentation (VS)", "aka": ["sedimentation"]},
+        {"nom": "Réticulocytes", "aka": []},
+        {"nom": "Électrophorèse de l'hémoglobine", "aka": ["drépanocytose", "thalassémie"]}
+      ]},
+    { "id": "hemostase", "nom": "Hémostase", "icone": "drop",
+      "examens": [
+        {"nom": "TP / INR", "aka": ["taux de prothrombine", "avk"]},
+        {"nom": "TCA", "aka": ["temps de céphaline activée"]},
+        {"nom": "Fibrinogène", "aka": []},
+        {"nom": "D-dimères", "aka": ["ddimeres", "thrombose"]}
+      ]},
+    { "id": "hormonologie", "nom": "Hormonologie", "icone": "pulse",
+      "examens": [
+        {"nom": "TSH", "aka": ["thyroïde", "thyroide"]},
+        {"nom": "T3 libre / T4 libre", "aka": ["ft3", "ft4", "thyroïde"]},
+        {"nom": "Anticorps anti-TPO", "aka": ["anti tpo", "thyroïdite"]},
+        {"nom": "Bêta-HCG", "aka": ["grossesse", "hcg"]},
+        {"nom": "Prolactine", "aka": []},
+        {"nom": "FSH / LH", "aka": ["fertilité"]},
+        {"nom": "Œstradiol", "aka": ["estradiol"]},
+        {"nom": "Progestérone", "aka": []},
+        {"nom": "Testostérone", "aka": []},
+        {"nom": "Cortisol", "aka": []},
+        {"nom": "Vitamine D (25-OH)", "aka": ["vit d", "25 oh"]},
+        {"nom": "Vitamine B12", "aka": ["b12"]},
+        {"nom": "Insuline", "aka": []}
+      ]},
+    { "id": "immuno-serologie", "nom": "Immunologie / Sérologie", "icone": "shield",
+      "examens": [
+        {"nom": "Sérologie hépatite B", "aka": ["ag hbs", "vhb"]},
+        {"nom": "Sérologie hépatite C", "aka": ["vhc"]},
+        {"nom": "Sérologie VIH", "aka": ["hiv", "sida"]},
+        {"nom": "Sérologie toxoplasmose", "aka": ["toxo"]},
+        {"nom": "Sérologie rubéole", "aka": []},
+        {"nom": "Facteur rhumatoïde", "aka": ["latex waaler rose"]},
+        {"nom": "Anticorps antinucléaires (AAN)", "aka": ["auto-immunité"]},
+        {"nom": "ASLO", "aka": ["antistreptolysines"]}
+      ]},
+    { "id": "microbiologie", "nom": "Microbiologie", "icone": "microbe",
+      "examens": [
+        {"nom": "ECBU", "aka": ["examen cytobactériologique des urines", "urines", "infection urinaire"]},
+        {"nom": "Prélèvement vaginal", "aka": ["pv"]},
+        {"nom": "Spermoculture", "aka": []},
+        {"nom": "Coproculture", "aka": ["selles"]},
+        {"nom": "Prélèvement de gorge", "aka": ["angine"]},
+        {"nom": "Antibiogramme", "aka": ["atb"]}
+      ]},
+    { "id": "parasitologie", "nom": "Parasitologie / Mycologie", "icone": "microbe",
+      "examens": [
+        {"nom": "Examen parasitologique des selles", "aka": ["parasites", "kop"]},
+        {"nom": "Scotch-test anal", "aka": ["oxyures"]},
+        {"nom": "Prélèvement mycologique", "aka": ["mycose", "champignon"]}
+      ]},
+    { "id": "marqueurs", "nom": "Marqueurs tumoraux", "icone": "pulse",
+      "examens": [
+        {"nom": "PSA", "aka": ["prostate"]},
+        {"nom": "CEA (ACE)", "aka": []},
+        {"nom": "CA 15-3", "aka": []},
+        {"nom": "CA 125", "aka": []},
+        {"nom": "CA 19-9", "aka": []},
+        {"nom": "Alpha-fœtoprotéine (AFP)", "aka": ["afp"]}
+      ]},
+    { "id": "spermiologie", "nom": "Spermiologie", "icone": "drop",
+      "examens": [
+        {"nom": "Spermogramme", "aka": ["fertilité", "sperme"]},
+        {"nom": "Spermocytogramme", "aka": []}
+      ]}
+  ]
+}

@@ -26,6 +26,13 @@ Définis en tête du générateur et répétés dans les pages :
 - WhatsApp : https://wa.me/213770280820 · Facebook : https://www.facebook.com/SinDia.Algeria/
 - **Note Google affichée (4,7/5, 844 avis, relevé du 3 novembre 2026) : valeur figée, à mettre à jour à la main** dans `index.html` et `contact.html`.
 
+## Catalogue d'examens (`data/analyses.json`)
+La page « Nos analyses » est générée depuis `data/analyses.json` : recherche instantanée + filtres par domaine.
+- Contenu actuel : **nomenclature standard de biologie médicale** (noms génériques), pas la copie d'un catalogue concurrent.
+- À faire par le laboratoire : confirmer les examens réellement réalisés, retirer les autres, en ajouter. `aka` = synonymes/sigles pour la recherche.
+- Ne PAS ajouter prix, délais ni valeurs de référence sans validation du biologiste responsable.
+- Après modification du JSON : relancer le générateur (`build.py`) pour régénérer `analyses.html`.
+
 ## Contenu provisoire
 Tous les passages à compléter sont marqués `[À COMPLÉTER : …]` (encadrés roses).
 Pour les lister : `grep -o "À COMPLÉTER : [^]]*" *.html`
